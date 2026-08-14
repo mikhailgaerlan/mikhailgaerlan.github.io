@@ -215,6 +215,7 @@ td {
 }
 
 #research,
+#portfolio,
 #contact {
     background-color:#2d2d2d;
     box-shadow: 1px 1px 5px #000;
@@ -224,17 +225,22 @@ td {
 
 .videoWrapper {
     position: relative;
-    padding-bottom: 25.25%; /* 16:9 */
-    padding-top: 25px;
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
+    overflow: hidden;
 }
 
-.videoWrapper iframe {
+.videoWrapper iframe,
+.videoWrapper .youtube-fallback,
+.videoWrapper .youtube-fallback img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+.videoWrapper .youtube-fallback img {
+    object-fit: cover;
 }
 
 #contact ul {
@@ -246,7 +252,19 @@ td {
     padding-right:15px;
 }
 
-#promo {
+#events {
+    background-color:#2d2d2d;
+    box-shadow: 1px 1px 5px #000;
+        -moz-box-shadow: 1px 1px 5px #000;
+        -webkit-box-shadow: 1px 1px 5px #000;
+}
+#events-listing {
+    background: transparent;
+    box-shadow: none;
+}
+
+#promo,
+.promo {
     background-color: #335379;
     padding:20px;
     overflow: hidden;
@@ -255,6 +273,9 @@ td {
     box-shadow: 1px 1px 5px #000;
         -moz-box-shadow: 1px 1px 5px #000;
         -webkit-box-shadow: 1px 1px 5px #000;
+}
+.promo + .promo {
+    margin-top:20px;
 }
 
 #aboutalt h3 {
@@ -273,14 +294,16 @@ td {
     margin-bottom:20px;
 }
 
-#promo p {
+#promo p,
+.promo p {
     float:left;
     font-size:20px;
     font-weight:300;
     margin:0;
     padding:15px;
 }
-#promo .button {
+#promo .button,
+.promo .button {
     float:right;
     background-color:#667D9D;
     color:#ffffff;
@@ -297,7 +320,8 @@ td {
     border-radius:3px;
         -moz-border-radius:3px;
 }
-#promo .button:hover {
+#promo .button:hover,
+.promo .button:hover {
     background-color:#667D9D;
     box-shadow: 0 5px 0 #1A3E68;
         -moz-box-shadow: 0 5px 0 #1A3E68;
@@ -474,13 +498,5 @@ footer a:hover {
     #homealt {
         margin-top:40px;
         padding:50px 0;
-    }
-
-    .videoWrapper iframe {
-	position: center;
-	top: 0;
-	left: 0;
-	width: 70%;
-	height: 125%;
     }
 }
