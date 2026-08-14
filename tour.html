@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92624437-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="https://latex.codecogs.com/latexit.js"></script>
+<script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+LatexIT.add('p',true);
+</script>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Veselka" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,600italic' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+    <script type="text/javascript">LatexIT.add('p',true);</script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="icon" href="image/logo-inverse.png" type="image/png">
+    <link rel="shortcut icon" href="image/logo-inverse.png" type="image/png">
+    <link rel="stylesheet" href="style_misc.css">
+    <title>Mikhail's Portfolio</title>
+  </head>
+  <body>
+    <!-- 
+	 ==========================
+	 Header
+	 ==========================
+      -->
+    <header>
+      <div class="wrap">
+	<nav>
+	  <ul id="top-menu">
+	    <li><a href="index.html#home">Home</a></li>
+	    <li><a href="index.html#abouth">About Me</a></li>
+	    <li><a href="index.html#researchh">Research</a></li>
+	    <li><a href="index.html#teachingh">Teaching</a></li>
+	    <li><a href="index.html#resume">Resume</a></li>
+	    <li><a href="tour.html">Portfolio</a></li>
+	    <li><a href="#contacth">Contact</a></li>
+	  </ul>
+	  <div id="pull">
+	    <span class="btn">Menu</span>
+	  </div>
+	</nav>
+      </div>
+    </header>
+    <section id="home">
+      <img src="image/logo-inverse.png"/>
+      <h1>Mikhail Gaerlan</h1>
+    </section>
+    <section id="about">
+      <div class="wrap">
+	<span class="anchor" id="teachingh"></span>
+	<h2>Portfolio</h2>
+	<p>This virtual portfolio showcases some of my work during my undergraduate and graduate studies. For a more detailed and  comprehensive overview of my research, please visit my research page <a href="research.html">here</a> or my GitHub page <a href="https://github.com/mikhailgaerlan" target="_blank">here</a>. Throughout this gallery of images, I express my interests as part-scientist and part-artist. The highlights include simulations and figures that I have generated through a combination of various software and programming languages. I have included below some of the code that I have written that was used to generate the data used in the plots.</p>
+	<h3 id="contents">Contents</h3>
+	<div class="col5 first">
+	  <h4><ul style="list-style:none">
+	      <li><a href="#highlights">Project Highlights</a></li>
+	      <ul>
+		<li><a href="#reddit">Reddit Recommendation System</a></li>
+		<li><a href="#frontier">Portfolio Risk-Return Optimization</a></li>
+		<li><a href="#sta208">STA 208 Statistical Methods in Machine Learning</a></li>
+		<li><a href="#ph4433">PH 4433 Computational Physics</a></li>
+		<li><a href="#spins">Social and Political Interacting Networks</a></li>
+		<li><a href="#mat160">MAT 160 Mathematica for Data Analytics & Decision Making</a></li>
+		<li><a href="#ma4313">MA 4313/4323 Numerical Analysis</a></li>
+		<li><a href="#reu">REU Topic: Genetic Algorithms</a></li>
+		<li><a href="#mat226b">MAT 226B Numerical Methods: Large-Scale Matrix Computations</a></li>
+		<li><a href="#mat258a">MAT 258A Numerical Optimization</a></li>
+	      </ul>
+	      <li><a href="#handwriting">Handwriting Sample</a></li>
+	      <li><a href="#photos">Personal Photo Gallery</a></li>
+	  </ul></h4>
+	</div>
+    </section>
+    <section>
+    </section>
+    <section id="about">
+      <div class="wrap">
+	<span class="anchor" id="highlights"></span>
+	<h2>Project Highlights</h2>
+	<p>The following plots are among my favorite samples from projects I've worked on. If available, descriptions explaining the model and generation of the plots can be found by clicking on the images.</p>
+	<h3 id="reddit"><a href="https://github.com/mikhailgaerlan/Reddit-Recommendations" target="_blank">Reddit Recommendation System</a></h3>
+	<p>The following graph shows some preliminary results of a subreddit recommendation system I wrote in Python. The data used is from a <a href="https://www.kaggle.com/josephleake/huge-collection-of-reddit-votes/" target="_blank">huge collection of Reddit votes</a>. The system uses principles of TF-IDF to filter results and then ranks those results using eigenvector centrality based on a network of shared users. The figure below shows the results for the subreddit "r/science". Each node represents a subreddit while each edge shows the number of users shared between those subreddits with the more users shared, the darker the connection. The results are sorted clockwise in a circle starting from the left. As you can see, the more well-connected nodes are ranked higher.</p>
+	<center>
+	  <img src="image/network.png" title="Subreddit network analysis" alt="network" width="600"/></br>
+	</center>
+	<h3 id="frontier"><a href="https://github.com/mikhailgaerlan/Portfolio-Efficient-Frontier" target="_blank">Portfolio Risk-Return Optimization</a></h3>
+	<p>Modern portfolio theory is based around the concept of the risk-return trade-off. A higher return generally means higher risk. Optimal portfolio selection generally deals with maximizing the return while simultaneously minimizing the risk. The following graph shows the convergence of an evolutionary algorithm to find the efficient frontier with basic constraints that the sum of the weights must be equal to one.</p>
+	<center>
+	  <img src="image/evolution_fit.gif" title="Objective Space" alt="frontier1" width="450"/>
+	  <img src="image/evolution.gif" title="Decision Space" alt="frontier22" width="450"/></br>
+	</center>
+	<h3 id="sta208"><a href="https://github.com/jsharpna/DavisSML" target="_blank">STA 208 Statistical Methods in Machine Learning</a></h3>
+	<p>Course Description: Focus on linear and nonlinear statistical models. Emphasis on concepts, methods, and data analysis; formal mathematics kept to minimum. Topics include resampling methods, regularization techniques in regression and modern classification, cluster analysis and dimension reduction techniques. Use professional level software.</p>
+	<p>My group chose the topic of our final project to be on image classification and the effects of dimension-reduction techniques on neural networks. The data set we used was the <a href="https://www.kaggle.com/c/cifar-10" target="_blank">CIFAR-10 images data set</a>. We preprocessed the data using singular value decomposition, discrete cosine transforms, and discrete wavelet transforms, then used convolutional neural networks and residual neural networks to classify the images. A copy of our report is found <a href="https://github.com/mikhailgaerlan/STA208FinalProject" target="_blank">here</a>. The first set of images shown is a sample of the original data set. The second set of images shown is a sample of the images reconstructed after the discrete wavelet transform was applied.<br><a href="#contents">Top</a></p>
+	<center>
+	  <img src="image/cifar-10.png" title="CIFAR-10 images data set" alt="cifar10" width="350"/></br></br>
+	  <img src="image/reduced.png" title="Image reconstruction after DWT" alt="reduce" width="350"/>
+	</center>
+	<a href="compphys.html"><h3 id="ph4433">PH 4433 Computational Physics</h3></a>
+	<p>Course Description: An introduction to modern methods of computational physics including topics such as: solution of differential equations, numerical matrix methods, and Monte Carlo simulation.</p>
+	<p>Homework submissions were in the form of HTML files that discussed the problems outlined in the assignment. An overview of my submissions can be found <a href="compphys.html">here</a>. Fortran was used to generate data to simulate various physical phenomena. The code used to generate the data can be found by clicking on the links to the respective web pages. The following plots were then generated by Mathematica using the data.<br><a href="#contents">Top</a></p>
+	<img src="PH 4433 Computational Physics/Homework/Homework 4/ohg6-hw4/2/repulsive/motion_rep_1.gif" title="Particle motion in a potential field." alt="hw4p2rep" width="500"/>
+	<img src="PH 4433 Computational Physics/Homework/Homework 9/ohg6-hw9/potential1.png" title="Two-dimensional parallel-plate capacitor." alt="hw491" width="400"/></br>
+	<img src="PH 4433 Computational Physics/Homework/Homework 3/ohg6-hw3/1/intensity.png" title="Light intensity." alt="hw31" width="350"/>
+	<img src="PH 4433 Computational Physics/Homework/Homework 5/ohg6-hw5/bifurcation.png" title="Damped-driven pendulum bifurcation diagram." alt="hw45" width="550"/>
+	<h3 id="spins"><a href="https://spins.faculty.ucdavis.edu" target="_blank">Social and Political Interacting Networks</a></h3>
+        <p>The Social and Political Interacting Networks group is an interdisciplinary working group devoted to the study of network science, social network analysis, and the study of international processes. Our group includes faculty, post doctoral fellows, and graduate students from political science, communications, computer science, applied math, and physics. Our goal is to explore the effect of shocks on networks, the causes and consequences of network spillover, and methods for analyzing social and political networks.</p>
+        <p>One of my research projects is on writing a simulation of a network formed in a social experiment conducted on campus. The research question asks about the effects of shocks on the system in the form of changes in the costs of ties formed in the network. The experiment consisted of subjects playing a game of maximizing utility in a network within a set number of rounds. Each round consists of two stages. In the first stage, players can form or drop links with other players. In the second stage, players play a <a href="https://en.wikipedia.org/wiki/Prisoner's_dilemma" target="_blank">prisoner's dilemma game</a> with those they have a tie from the previous stage. The following image shows a few rounds of the simulation where the player highlighted in red uses a strategy in which they always choose to defect in the prisoner's dilemma game. The code to the simulation can be found <a href="https://github.com/mikhailgaerlan/ABM-Dilemma" target="_blank">here</a>.<br><a href="#contents">Top</a></p>
+	<center>
+	  <img src="image/networks.gif" title="Coevolutionary network" alt="acc" width="600"/></br>
+	</center>
+	<h3 id="mat160">MAT 160 Mathematics for Data Analytics & Decision Making</h3>
+        <p>Course Description: This course discusses mathematical models used in analytics and operations research. The basic models discussed serve as an introduction to the analysis of data and methods for optimal decision and planning. Mathematical methods and algorithms discussed include advanced linear algebra, convex and discrete optimization, and probability. These are some of the tools necessary for the data classification, machine learning, clustering and pattern recognition, and for problems in planning, resource allocation, scheduling, and ranking.</p>
+	<p>The following images are from the results of machine learning code using SVD to recognize handwritten numerical digits. A sample of the worst digits are also shown below.<br><a href="#contents">Top</a></p>
+	<center>
+	  <img src="image/digit_accuracy.png" title="Digit Accuracy" alt="acc" width="600"/></br>
+	  <img src="image/worst_3.png" title="Worst of Three" alt="num3" width="300"/>
+	  <img src="image/worst_5.png" title="Worst of Five" alt="num5" width="300"/>
+	</center>
+	<h3 id="ma4313">MA 4313/4323 Numerical Analysis</h3>
+	<p>Course Description: (Numerical Analysis I) Matrix operations; error analysis; norms of vectors and matrices; transformations; matrix functions; numerical solutions of systems of linear equations; stability; matrix inversion; eigenvalue problems; approximations.</p>
+	<p>Course Description: (Numerical Analysis II) Numerical solutions of equations; error analysis; finite difference methods; numerical differentiation and integration; series expansions; difference equations; numerical solution of differential equations.</p>
+	<p>Maple was the primary software used throughout the course. Most of the assignments resulted in numeric results that were usually not plotted. However for the final project, I produced animations displaying the various results of an interpolation algorithm with various parameters.<br><a href="#contents">Top</a></p>
+	<center>
+	  <img src="image/samplerate2.gif" alt="num1" width="300"/>
+	  <img src="image/samplerate1.gif" alt="num2" width="300"/>
+	  <img src="image/samplerate3.gif" alt="num3" width="300"/>
+	</center>
+	<h3 id="reu">REU Topic: Genetic Algorithms</h3>
+	<p>My Cornell Physics <a href="https://www.classe.cornell.edu/StudentOpportunities/ReuProgram.html" target="_blank">REU</a> began with a study of genetic algorithms using the book Multi-Objective Optimization using Evolutionary Algorithms by Kalylanmoy Deb. I have included some simulations that I made of the genetic algorithms as applied to various optimization test functions. For a link to my research on optimization and accelerator science, click <a href="research.html#accelerator">here</a>. I also have some optimization code <a href="PH 4433 Computational Physics/Project/" target="_blank">here</a> that I wrote in Fortran for my computational physics final project.<br><a href="#contents">Top</a></p>
+	<center>
+	  <img src="image/binhkorn.gif" title="Binh and Korn function" alt="opt1" width="400"/>
+	  <img src="image/kursawe.gif" title="Kursawe function" alt="opt2" width="400"/></br>
+	  <img src="image/viennet.gif" title="Viennet function" alt="opt3" width="400"/>
+	</center>
+	<h3 id="mat226b">MAT 226B Numerical Methods: Large-Scale Matrix Computations</h3>
+	<p>Course Description: Numerical methods for large-scale matrix computations, including direct and iterative methods for the solution of linear systems, the computation of eigenvalues and singular values, the solution of least-squares problems, matrix compression, methods for the solution of linear programs.</p>
+	<p>The following images are the approximate solutions to a Poisson equation with initial boundary conditions. The solver written in MATLAB is based on a fast-fourier transorm method for solving a tridiagonal linear system of equations. The code can be found <a href="code/poissonsolver" target="_blank">here</a>.<br><a href="#contents">Top</a></p>
+	<center><p><a href="https://www.codecogs.com/eqnedit.php?latex=-\frac{\partial^2v(x,y)}{\partial&space;x^2}-\frac{\partial^2v(x,y)}{\partial&space;y^2}=f(x,y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?-\frac{\partial^2v(x,y)}{\partial&space;x^2}-\frac{\partial^2v(x,y)}{\partial&space;y^2}=f(x,y)" title="-\frac{\partial^2v(x,y)}{\partial x^2}-\frac{\partial^2v(x,y)}{\partial y^2}=f(x,y)" height="55"/></a></p></center>
+	<center>
+	  <img src="image/poisson_approx_2.png" title="PDE2" alt="opt1" width="300"/>
+	  <img src="image/poisson_approx_3.png" title="PDE3" alt="opt2" width="300"/>
+	  <img src="image/poisson_approx_5.png" title="PDE5" alt="opt3" width="300"/>
+	</center>
+	<h3 id="mat258a">MAT 258A Numerical Optimization</h3>
+	<p>Course Description: Numerical methods for infinite dimensional optimization problems. Newton and Quasi-Newton methods, linear and sequential quadratic programming, barrier methods; large-scale optimization; theory of approximations; infinite and semi-infinite programming; applications to optimal control, stochastic optimization and distributed systems.</p>
+	<p>The following images show the comparison of two methods for solving the LASSO problem. The left image shows the convergence of the subgradient method, and the right image shows the convergence of the proximal gradient method. Both methods vary the step size and weighting parameter. The code can be found <a href="code/optimization" target="_blank">here</a>.<br><a href="#contents">Top</a></p>
+	<center><p><a href="https://www.codecogs.com/eqnedit.php?latex=\min_x\frac{1}{2}\left|\left|Ax-b\right|\right|_2^2&plus;\tau\left|\left|x\right|\right|_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\min_x\frac{1}{2}\left|\left|Ax-b\right|\right|_2^2&plus;\tau\left|\left|x\right|\right|_1" title="\min_x\frac{1}{2}\left|\left|Ax-b\right|\right|_2^2+\tau\left|\left|x\right|\right|_1" /></a></p>
+	<center>
+	  <img src="image/time_error_sub.png" title="Subgradient Method" alt="opt1" width="450"/>
+	  <img src="image/time_error_prox.png" title="Proximal Method" alt="opt2" width="450"/>
+	</center>
+      </div>
+      <!--
+      <div class="wrap">
+	<center>
+	  <h3><a href="https://plot.ly/javascript" target="_blank">Sample plot.ly plot</a></h3>
+	</center>
+      </div>
+      <div id="plots">
+	<script src="code/dejs/de.js"></script>
+      </div>
+      --!>
+    </section>
+    <section>
+    </section>
+    <section id="about">
+      <div class="wrap">
+	<span class="anchor" id="handwriting"></span>
+	<h2>Handwriting Sample</h2>
+	<p>I frequently write both the notes I take and the notes I give using my iPad. Digital handwriting gives me all the flexibility of handwriting with the conveniences of digital work. Here I have compiled a gallery of my various handwriting.<br><a href="#contents">Top</a></p>
+	<center>
+	  <img src="image/handwriting.jpg" title="Handwriting Sample" width="800"/>
+	</center>
+      </div>
+    </section>
+    <section>
+    </section>
+    <section id="about">
+      <div class="wrap">
+	<span class="anchor" id="photos"></span>
+	<h2>Personal Photo Gallery</h2>
+	<center>
+	  <img src="image/gallery/sanjose.jpeg" title="At Santa Clara Central Park." width="300"/>
+	  <img src="image/gallery/palace.jpg" title="The Palace of Fine Arts is one of my favorite places." width="300"/>
+	  <img src="image/gallery/filgrad.jpg" title="Filipino graduation portrait photo." width="300"/>
+	  <img src="image/gallery/neiltyson.jpg" title="Fan picture of me and Neil deGrasse Tyson at the 2014 APS April Meeting." width="300"/>
+	  <img src="image/gallery/stlouiszoo.jpg" title="My friends and me at the Saint Louis Zoo." width="300"/>
+	  <img src="image/gallery/cornell.jpg" title="Waiting for fireworks with my Cornell Physics REU friends." width="300"/>
+	  <img src="image/gallery/sciencebowl.jpg" title="I received this bag courtesy of the Department of Energy when I competed in the National Science Bowl in 2012." width="300"/>
+	  <img src="image/gallery/mastersgrad.jpg" title="Master's graduation photo." width="300"/>
+	  <img src="image/gallery/jlab.jpg" title="Spent a month at Jlab working in Hall C." width="300"/>
+	  <br><a href="#contents">Top</a>
+	</center>
+      </div>
+    </section>
+    <section>
+    </section>
+    <!-- 
+	 ==========================
+	 Contacts
+	 ==========================
+      -->
+    <section id="contact">
+      <div class="wrap">
+	<span class="anchor" id="contacth"></span>
+	<h2>Contact Information</h2>
+	<div class="col2 first">
+	  Office: <a href="https://www.math.ucdavis.edu/about/building-maps/" target="_blank">MSB 3229</a><br />
+	  <a href="https://goo.gl/maps/X6DWG2GT3522" target="_blank">One Shields Ave</br>
+	    Davis, CA 95616</a><br /><br />
+	  
+	  E-mail: <a href="mailto:mgaerlan@math.ucdavis.edu">mgaerlan@math.ucdavis.edu</a><br />
+	  E-mail: <a href="mailto:mikhailgaerlan@gmail.com">mikhailgaerlan@gmail.com</a><br />
+	</div>
+	<div class="col4">
+	  <center>
+	    <h3>Find me on social media</h3>
+	    <ul>
+	      <li><a href="https://www.facebook.com/mikhailgaerlan" target="_blank"><img src="SVG/Facebook-color.svg" width="100"></a></li>
+	      <li><a href="https://www.linkedin.com/in/mikhailgaerlan" target="_blank"><img src="SVG/LinkedIn-color.svg" width="100"></a></li>
+	      <li><a href="https://www.instagram.com/mikhailgaerlan/" target="_blank"><img src="SVG/Instagram-color.svg" width="100"></a></li>
+	    </ul>
+	  </center>
+	</div>
+      </div>
+    </section>
+    <!-- 
+	 ==========================
+	 Footer
+	 ==========================
+      -->
+    <footer>
+      Last Updated: 14 December 2020<br />
+      Copyright &copy; 2020 Mikhail Gaerlan. All rights reserved.<br />
+      Template design by Veselka Dobreva for <a href="http://andreasviklund.com" target="_blank">andreasviklund.com</a>
+    </footer>
+  </body>
+</html>
+
+<script>
+  w3.includeHTML();
+</script>

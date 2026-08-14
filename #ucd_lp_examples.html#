@@ -1,0 +1,163 @@
+<!-- Linear Programming Webpage for UCD Math Circle 2019, by Alaina Gibbons -->
+
+
+<html>
+  <head>
+    <title> UCD Math Circle LP </title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+
+      // Example 1
+
+      function lpFarm() {
+      
+      
+      // Input the given values and constraints
+      var valL = document.lpCalc.valL.value;
+      var valF = document.lpCalc.valF.value;
+      var valP = document.lpCalc.valP.value;
+
+      var valFb = document.lpCalc.valFb.value;
+      var valFt = document.lpCalc.valFt.value;
+
+      var valPb = document.lpCalc.valPb.value;
+      var valPt = document.lpCalc.valPt.value;
+
+      var valSb = document.lpCalc.valSb.value;
+      var valSt = document.lpCalc.valSt.value;
+
+      // Check that nothing the user did was stupid
+      // E.g. no negative values allowed, give a warning if the required pesticide amounts are too high, etc. etc.
+
+
+      var size = 200, t = new Array(size), graphL = new Array(size), graphF = new Array(size), graphP = new Array(size), i;
+
+
+
+      for (i = 0; i < size; i++) {
+		      
+		      // create values for t[i]
+		      t[i] = i+1;
+		      
+		      // t+b=L means b=L-t
+		      graphL[i] = valL - t[i];
+		      
+		      // Ft*t+Fb*b=F means that b=(F-Ft*t)/Fb
+		      graphF[i] = (valF - valFt*t[i])/valFb;
+		      
+		      // Pt*t+Pb*b=P means that b=(P-Pt*t)/Pb
+		      graphP[i] = (valP - valPt*t[i])/valPb;	
+		      
+		      }
+		      
+		      var traceL = {
+		      x: t,
+		      y: graphL,
+		      type: 'scatter'
+		      };
+		      
+		      var traceF = {
+		      x: t,
+		      y: graphF,
+		      type: 'scatter'
+		      };
+		      
+		      var traceP = {
+		      x: t,
+		      y: graphP,
+		      type: 'scatter'
+		      };
+		      
+		      var data = [traceL, traceF, traceP];
+		      
+		      MYDIV = document.getElementById('myDiv');
+		      
+		      Plotly.plot(MYDIV, data);
+		      
+		      document.lpCalc.tester.value = valL;
+
+
+		      var solver = require("./javascript-lp-solver/src/solver"),
+		      results,
+		      model = {
+		      "optimize": "capacity",
+		      "opType": "max",
+		      "constraints": {
+		      "plane": {"max": 44},
+		      "person": {"max": 512},
+		      "cost": {"max": 300000}
+		      },
+		      "variables": {
+		      "brit": {
+		      "capacity": 20000,
+		      "plane": 1,
+		      "person": 8,
+		      "cost": 5000
+		      },
+		      "yank": {
+		      "capacity": 30000,
+		      "plane": 1,
+		      "person": 16,
+		      "cost": 9000
+		      }
+		      },
+		      };
+
+		      results = solver.Solve(model);
+		      document.lpCalc.result.value = results.result;
+		      
+		      };
+		      
+		      
+
+		      </script>
+    
+    <b>UC Davis Math Circle Picnic Day 2019</b>
+    <form name = "lpCalc">
+
+      <!-- Title of page here, so people know that they are in the right place. 
+	   But not too big that they have to scroll through a lot of crap. -->
+
+
+      <!-- Describe the example. Maybe have this on the poster instead????-->
+      Suppose that a farmer has a piece of land of size <i>L</i> = <input type="text" maxlength="8" name="valL" value="100" size="4"> acres, to be planted with either tomatoes, brocolli, or some combination of the two. <br />
+      The farmer has a limited amount of fertilizer, <i>F</i> = <input type="text" maxlength="8" name="valF" value="130" size="4"> lbs, and pesticide, <i>P</i> = <input type="text" maxlength="8" name="valP" value="110" size="4"> lbs. <br />
+      Every acre of tomatoes requires <i>F<sub>t</sub></i> = <input type="text" maxlength="8" name="valFt" value="1" size="4"> lbs of fertilizer and <i>P<sub>t</sub></i> = <input type="text" maxlength="8" name="valPt" value=".5" size="4"> lbs of pesticide, while every acre of brocolli requires <i>F<sub>b</sub></i> = <input type="text" maxlength="8" name="valFb" value=".25" size="4"> lbs of fertilizer and <i>P<sub>b</sub></i> = <input type="text" maxlength="8" name="valPb" value="1.5" size="4"> lbs of pesticide. <br />
+      Let <i>S<sub>t</sub></i> = $<input type="text" maxlength="8" name="valSt" value="300" size="4"> be the selling price of tomatoes per acre, and <i>S<sub>b</sub></i> = $<input type="text" maxlength="8" name="valSb" value="275" size="4"> the selling price of brocolli. <br />
+
+      <input type="button" onClick=lpFarm() value="Calculate"> <input type="reset" value="Reset"><br /><br />
+
+      Tester value here: <input type="text" name="tester" readonly="readonly" size="6">. <br />
+
+      Result value here: <input type="text" name="result" readonly="readonly" size="6">. <br />
+
+
+      <div id="myDiv" style="width:1000px;height:1000px;">
+      </div>
+
+
+    </form>
+
+
+    <!-- Get inputs for variables. Maybe make these on a slider instead of an input box? Can do that later, keep simple now. -->
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

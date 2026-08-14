@@ -1,0 +1,79 @@
+{
+  "_from": "@uandi/javascript-lp-solver",
+  "_id": "@uandi/javascript-lp-solver@0.4.5",
+  "_inBundle": false,
+  "_integrity": "sha512-ppIxbxiJZ1XsY1Is3GXxWmdRjlwlGXf0dXdQYW5zKCQtiK4Y2p8dL/EpUhiC3fwTw9ScZPVZYgD2i0FEHKgjsw==",
+  "_location": "/@uandi/javascript-lp-solver",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@uandi/javascript-lp-solver",
+    "name": "@uandi/javascript-lp-solver",
+    "escapedName": "@uandi%2fjavascript-lp-solver",
+    "scope": "@uandi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@uandi/javascript-lp-solver/-/javascript-lp-solver-0.4.5.tgz",
+  "_shasum": "2f6ff7c36342245194e37d379f97a5b930e0c969",
+  "_spec": "@uandi/javascript-lp-solver",
+  "_where": "/Users/mikhailgaerlan",
+  "authors": [
+    "Justin W. Wolcott"
+  ],
+  "bugs": {
+    "url": "https://github.com/uandi/jsLPSolver/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Brice Chevalier",
+      "email": "bchevalier@wizcorp.jp"
+    },
+    {
+      "name": "Loïc Venerosy",
+      "email": "lvenerosy@wizcorp.jp"
+    }
+  ],
+  "deprecated": false,
+  "description": "Easy to use, JSON oriented Linear Programming and Mixed Int. Programming Solver",
+  "devDependencies": {
+    "benchmark": "*",
+    "grunt": "*",
+    "grunt-browserify": "^4.0.1",
+    "grunt-contrib-jshint": "~0.9",
+    "grunt-contrib-uglify": "*",
+    "grunt-jsbeautifier": "*",
+    "grunt-mocha-test": "*",
+    "mocha": "3.1.2",
+    "walk": "*"
+  },
+  "homepage": "https://github.com/uandi/jsLPSolver#readme",
+  "keywords": [
+    "Linear",
+    "Programming",
+    "Integer",
+    "Programming",
+    "Solver",
+    "Linear Programming",
+    "Linear Optimization",
+    "Simplex",
+    "Mixed Integer Optimization",
+    "Mixed Integer Programming"
+  ],
+  "license": "UNLICENSE",
+  "main": "./src/main",
+  "name": "@uandi/javascript-lp-solver",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uandi/jsLPSolver.git"
+  },
+  "version": "0.4.5"
+}
